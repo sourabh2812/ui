@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+
+<script type="text/javascript" src="script/jquery-3.1.0.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/animate.css" />
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="css/icono.min.css">
+
+</head>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#itemLookup').click(function(e) {
+			window.location.assign('ItemLookup.html');	
+		});
+	});
+</script>
+
+<body style="padding: 40px;">
+
+	<div class="category-ribbon">
+		<b>Store Receipt</b>
+	</div>
+
+	<div class="row top-summary">
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<div class="widget white-1 animated bounceIn">
+				<div class="widget-content padding">
+					<div class="widget-icon">
+						<i class="icono-clock" aria-hidden="true"></i>
+					</div>
+					<div class="text-box">
+						<p class="maindata">Schedule from DC</p>
+						<h2>
+							<span>03/12</span>
+						</h2>
+
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="widget-footer">
+					<div class="row">
+						
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<div class="widget white-1 animated bounceIn">
+				<div class="widget-content padding">
+					<div class="widget-icon">
+						<i class="icono-clock" aria-hidden="true"></i>
+					</div>
+					<div class="text-box">
+						<p class="maindata">Schedule from DSD</p>
+						<h2>
+							<span>2/10</span>
+						</h2>
+
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="widget-footer">
+					<div class="row">
+						
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<div class="widget white-1 animated bounceIn">
+				<div class="widget-content padding">
+					<div class="widget-icon">
+						<i class="icono-clock" aria-hidden="true"></i>
+					</div>
+					<div class="text-box">
+						<p class="maindata">Schedule from Store</p>
+						<h2>
+							<span>1</span>
+						</h2>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="widget-footer">
+					<div class="row">
+						
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="category-ribbon">
+		<b>Inventory</b>
+	</div>
+
+	<div class="row top-summary">
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<div class="widget red-1 animated bounceIn">
+				<div class="widget-content padding">
+					<div class="widget-icon"
+						style="color: #0A0A0A;">
+						<i class="fa fa-cubes" aria-hidden="true"></i>
+					</div>
+					<div class="text-box">
+						<p class="maindata" style="color: #020202;">Out of Stock</p>
+						<h2 style="color: #000000;">
+							<span>5</span>
+						</h2>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="widget-footer" style="color: #020202;">
+					<div class="row">
+						
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<div class="widget red-1 animated bounceIn">
+				<div class="widget-content padding">
+					<div class="widget-icon"
+						style="color: #0A0A0A;">
+						<i class="fa fa-cubes" aria-hidden="true"></i>
+					</div>
+					<div class="text-box">
+						<p class="maindata" style="color: #020202;">Promotions out of
+							Stock</p>
+						<h2 style="color: #000000;">
+							<span>2</span>
+						</h2>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="widget-footer" style="color: #020202;">
+					<div class="row">
+						
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="itemLookup">
+			<div class="widget green-1 animated bounceIn">
+				<div class="widget-content padding">
+					<div class="widget-icon" style="color: #0A0A0A;">
+						<i class="fa fa-cubes" aria-hidden="true"></i>
+					</div>
+					<div class="text-box">
+						<p class="maindata" style="color: #020202;">Item Lookup</p>
+						<h2 style="color: #000000;">
+							<span>0</span>
+						</h2>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="widget-footer" style="color: #020202;">
+					<div class="row">
+						
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="category-ribbon">
+		<b>Store Ops</b>
+	</div>
+	<div class="row top-summary">
+
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<div class="widget white-1 animated bounceIn">
+				<div class="widget-content padding">
+					<div class="widget-icon">
+						<i class="fa fa-taxi" aria-hidden="true"></i>
+					</div>
+					<div class="text-box">
+						<p class="maindata">Seasonal Packaway</p>
+						<h2>
+							<span class="animate-number" data-value="18648"
+								data-duration="3000">14</span>
+						</h2>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="widget-footer">
+					<div class="row">
+						
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<div class="widget white-1 animated bounceIn">
+				<div class="widget-content padding">
+					<div class="widget-icon">
+						<i class="fa fa-mouse-pointer" aria-hidden="true"></i>
+					</div>
+					<div class="text-box">
+						<p class="maindata">Click n Collect</p>
+						<h2>
+							<span>05/28</span>
+						</h2>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="widget-footer">
+					<div class="row">
+						
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<div class="widget white-1 animated bounceIn">
+				<div class="widget-content padding">
+					<div class="widget-icon">
+						<i class="fa fa-undo" aria-hidden="true"></i>
+					</div>
+					<div class="text-box">
+						<p class="maindata">Store Returns</p>
+						<h2>
+							<span class="animate-number" data-value="18648"
+								data-duration="3000">-</span>
+						</h2>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="widget-footer">
+					<div class="row">
+						
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="category-ribbon">
+		<b>Cycle Count</b>
+	</div>
+
+	<div class="row top-summary">
+
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<div class="widget white-1 animated bounceIn">
+				<div class="widget-content padding">
+					<div class="widget-icon">
+						<i class="icono-sync" aria-hidden="true"></i>
+					</div>
+					<div class="text-box">
+						<p class="maindata">Planned Counts</p>
+						<h2>
+							<span class="animate-number" data-value="18648"
+								data-duration="3000">05/8</span>
+						</h2>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="widget-footer">
+					<div class="row">
+						
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<div class="widget white-1 animated bounceIn">
+				<div class="widget-content padding">
+					<div class="widget-icon">
+						<i class="icono-sync" aria-hidden="true"></i>
+					</div>
+					<div class="text-box">
+						<p class="maindata">Ad hoc Counts</p>
+						<h2>
+							<span class="animate-number" data-value="18648"
+								data-duration="3000">02/3</span>
+						</h2>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="widget-footer">
+					<div class="row">
+						
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<div class="widget green-1 animated bounceIn">
+				<div class="widget-content padding">
+					<div class="widget-icon" style="color: #0A0A0A;">
+						<i class="fa fa-history" aria-hidden="true"></i>
+					</div>
+					<div class="text-box">
+						<p class="maindata" style="color: #020202;">Adjustment History</p>
+						<h2 style="color: #000000;">
+							<span class="animate-number" data-value="18648"
+								data-duration="3000">+203$</span>
+						</h2>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="widget-footer" style="color: #020202;">
+					<div class="row">
+						
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<div class="category-ribbon">
+		<b>Sales</b>
+	</div>
+
+	<div class="row top-summary">
+
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<div class="widget white-1 animated bounceIn">
+				<div class="widget-content padding">
+					<div class="widget-icon">
+						<i class="icono-ruler" aria-hidden="true"></i>
+					</div>
+					<div class="text-box">
+						<p class="maindata">DSR</p>
+						<h2>
+							<span class="animate-number" data-value="18648"
+								data-duration="3000">4000.34$</span>
+						</h2>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="widget-footer">
+					<div class="row">
+						
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<div class="widget red-1 animated bounceIn">
+				<div class="widget-content padding">
+					<div class="widget-icon" style="color: #0A0A0A;">
+						<i class="fa fa-sort-amount-desc" aria-hidden="true"></i>
+					</div>
+					<div class="text-box">
+						<p class="maindata" style="color: #020202;">Day Shortfall</p>
+						<h2 style="color: #000000;">
+							<span class="animate-number" data-value="18648"
+								data-duration="3000">-300.23$</span>
+						</h2>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="widget-footer" style="color: #020202;">
+					<div class="row">
+						
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<div class="widget green-1 animated bounceIn">
+				<div class="widget-content padding">
+					<div class="widget-icon" style="color: #0A0A0A;">
+						<i class="fa fa-sort-amount-asc" aria-hidden="true"></i>
+					</div>
+					<div class="text-box">
+						<p class="maindata" style="color: #020202;">Month Shortfall</p>
+						<h2 style="color: #000000;">
+							<span class="animate-number" data-value="18648"
+								data-duration="3000">+387.66$</span>
+						</h2>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="widget-footer" style="color: #020202;">
+					<div class="row">
+						
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<div class="category-ribbon">
+		<b>Ringing Registers</b>
+	</div>
+
+	<div class="row top-summary">
+
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<div class="widget white-1 animated bounceIn">
+				<div class="widget-content padding">
+					<div class="widget-icon">
+						<i class="fa fa-file-text-o" aria-hidden="true"></i>
+					</div>
+					<div class="text-box">
+						<p class="maindata">In-Active Registers</p>
+						<h2>
+							<span class="animate-number" data-value="18648"
+								data-duration="3000">03/10</span>
+						</h2>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="widget-footer">
+					<div class="row">
+						
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<div class="widget red-1 animated bounceIn">
+				<div class="widget-content padding">
+					<div class="widget-icon" style="color: #0A0A0A;">
+						<i class="fa fa-ban" aria-hidden="true"></i>
+					</div>
+					<div class="text-box">
+						<p class="maindata" style="color: #020202;">Item Voids</p>
+						<h2 style="color: #000000;">
+							<span class="animate-number" data-value="18648"
+								data-duration="3000">101</span>
+						</h2>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="widget-footer" style="color: #020202;">
+					<div class="row">
+						
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="category-ribbon">
+		<b>People Related</b>
+	</div>
+
+	<div class="row top-summary">
+
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<div class="widget white-1 animated bounceIn">
+				<div class="widget-content padding">
+					<div class="widget-icon">
+						<i class="icono-calendar" aria-hidden="true"></i>
+					</div>
+					<div class="text-box">
+						<p class="maindata">Attendance</p>
+						<h2>
+							<span class="animate-number" data-value="18648"
+								data-duration="3000">01/15</span>
+						</h2>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="widget-footer">
+					<div class="row">
+						
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<div class="widget white-1 animated bounceIn">
+				<div class="widget-content padding">
+					<div class="widget-icon">
+						<i class="icono-user" aria-hidden="true"></i>
+					</div>
+					<div class="text-box">
+						<p class="maindata">Planned Leaves</p>
+						<h2>
+							<span class="animate-number" data-value="18648"
+								data-duration="3000">04/15</span>
+						</h2>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="widget-footer">
+					<div class="row">
+						
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<div class="widget white-1 animated bounceIn">
+				<div class="widget-content padding">
+					<div class="text-box">
+						<p class="maindata">Area of Responsibility</p>
+						<h2>
+							<span class="animate-number" data-value="18648"
+								data-duration="3000">4</span>
+						</h2>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="widget-footer">
+					<div class="row">
+						<div class="widget-icon">
+						<i class="icono-user" aria-hidden="true"></i>
+					</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

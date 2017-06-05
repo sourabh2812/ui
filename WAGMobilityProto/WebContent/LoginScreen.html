@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+
+<script type="text/javascript" src="script/jquery-3.1.0.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/form-login.css" />
+
+</head>
+
+<script type="text/javascript">
+	function fnLoadDashboard() {
+		window.location.assign('Dashboard.html');
+	}
+</script>
+
+<style>
+.login-header {
+	padding: 15px;
+	border-bottom: 1px solid #c7c7c7;
+	background: #dfe0e4;
+}
+</style>
+
+<body style="padding: 40px; margin-top: 15%;">
+
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<div class="login-header" style="text-align: center;">
+				<h4 class="modal-title" id="myModalLabel">Log in</h4>
+			</div>
+
+			<div class="modal-body">
+				<form role="form">
+					<div class="form-group">
+						<div class="input-group">
+							<input type="text" class="form-control" id="uLogin"
+								placeholder="User"> <label for="uLogin"
+								class="input-group-addon glyphicon glyphicon-user"></label>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="input-group">
+							<input type="password" class="form-control" id="uPassword"
+								placeholder="Password"> <label for="uPassword"
+								class="input-group-addon glyphicon glyphicon-lock"></label>
+						</div>
+					</div>
+
+					<div class="checkbox">
+						<label> <input type="checkbox"> Remember me
+						</label>
+					</div>
+				</form>
+
+			</div>
+
+			<div class="modal-footer" style="border-top: 1px #fff;">
+				<button onclick="fnLoadDashboard();"
+					class="form-control btn btn-primary" style="display: inline-block;">Log
+					on</button>
+			</div>
+
+			<div class="modal-footer" style="border-top: 0px #fff;">
+				<button class="form-control btn btn-primary"
+					style="display: inline-block; background-color: #727976">Change
+					Password</button>
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>

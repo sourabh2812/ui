@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Item Lookup</title>
+<script type="text/javascript" src="script/jquery-3.1.0.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/header_footer.css">
+
+</head>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('i[id=bay1]').click(function(e) {
+			var me = this;
+			$('div[id=bay11]').toggle();
+			$('div[id=bay12]').toggle();
+			if (me.className == 'glyphicon glyphicon-menu-right') {
+				me.className = 'glyphicon glyphicon-menu-up';
+			} else {
+				me.className = 'glyphicon glyphicon-menu-right';
+			}
+		});
+
+		$('i[id=bay2]').click(function(e) {
+			var me = this;
+			$('div[id=bay21]').toggle();
+			$('div[id=bay22]').toggle();
+			if (me.className == 'glyphicon glyphicon-menu-right') {
+				me.className = 'glyphicon glyphicon-menu-up';
+			} else {
+				me.className = 'glyphicon glyphicon-menu-right';
+			}
+		});
+
+		$('i[id=bay3]').click(function(e) {
+			var me = this;
+			$('div[id=bay31]').toggle();
+			$('div[id=bay32]').toggle();
+			if (me.className == 'glyphicon glyphicon-menu-right') {
+				me.className = 'glyphicon glyphicon-menu-up';
+			} else {
+				me.className = 'glyphicon glyphicon-menu-right';
+			}
+		});
+
+		$('i[id=bay4]').click(function(e) {
+			var me = this;
+			$('div[id=bay41]').toggle();
+			$('div[id=bay42]').toggle();
+			if (me.className == 'glyphicon glyphicon-menu-right') {
+				me.className = 'glyphicon glyphicon-menu-up';
+			} else {
+				me.className = 'glyphicon glyphicon-menu-right';
+			}
+		});
+
+		$('#bay4chkbox').click(function(e) {
+			if ($('#bay4chkbox').prop('checked')) {
+				$('#bay41 input[type=checkbox]').prop('checked', true);
+				$('#bay42 input[type=checkbox]').prop('checked', true);
+			} else {
+				$('#bay41 input[type=checkbox]').prop('checked', false);
+				$('#bay42 input[type=checkbox]').prop('checked', false);
+			}
+		});
+
+		$('#bay3chkbox').click(function(e) {
+			if ($('#bay3chkbox').prop('checked')) {
+				$('#bay31 input[type=checkbox]').prop('checked', true);
+				$('#bay32 input[type=checkbox]').prop('checked', true);
+			} else {
+				$('#bay31 input[type=checkbox]').prop('checked', false);
+				$('#bay32 input[type=checkbox]').prop('checked', false);
+			}
+		});
+
+		$('#bay2chkbox').click(function(e) {
+			if ($('#bay2chkbox').prop('checked')) {
+				$('#bay21 input[type=checkbox]').prop('checked', true);
+				$('#bay22 input[type=checkbox]').prop('checked', true);
+			} else {
+				$('#bay21 input[type=checkbox]').prop('checked', false);
+				$('#bay22 input[type=checkbox]').prop('checked', false);
+			}
+		});
+
+		$('#bay1chkbox').click(function(e) {
+			if ($('#bay1chkbox').prop('checked')) {
+				$('#bay11 input[type=checkbox]').prop('checked', true);
+				$('#bay12 input[type=checkbox]').prop('checked', true);
+			} else {
+				$('#bay11 input[type=checkbox]').prop('checked', false);
+				$('#bay12 input[type=checkbox]').prop('checked', false);
+			}
+		});
+	});
+
+	function fnOnClick() {
+		$('input[class=form-control]').val(' ');
+	}
+
+	function fnOnBlur() {
+		$('input[class=form-control]').val('');
+	}
+
+	function fnLoadArticleDetail() {
+		window.location.assign('ArticleDetail.html');
+	}
+
+	function fnLoadHome() {
+		window.location.assign('Dashboard.html');
+	}
+
+	function fnLoadLogin() {
+		window.location.assign('LoginScreen.html');
+	}
+</script>
+
+<style>
+.form-control {
+	height: 55px;
+	font-size: 12px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
+}
+
+label {
+	font-weight: inherit;
+}
+</style>
+
+<body style="padding-top: 1px; line-height: 22px;">
+
+	<section class="row p0">
+
+		<div class="col-lg-12 col-md-12 col-sm-12"
+			style="padding: 12px 30px 12px 30px; background: rgba(230, 230, 230, 0.68); border-bottom: 1px solid rgba(85, 85, 85, 0.35)">
+			<article
+				class="col-lg-8 col-md-6 col-sm-8 col-xs-12 wag-header-logo-desktop hidden-xs">
+				<figure>
+					<img src="images/walgreens-logo-desktop.png" alt="Logo"
+						aria-label="Walgreens-logo">
+					<figcaption></figcaption>
+				</figure>
+			</article>
+			<article
+				class="col-md-6 col-sm-6 col-xs-12 p0 wag-header-logo-ipad wag-sticky wag-sticky-nav mobileLogo">
+				<figure>
+					<article class="hidden-xs">
+						<img src="images/walgreens-tab-logo.wdp" alt="Logo"
+							aria-label="Walgreens-logo">
+					</article>
+				</figure>
+			</article>
+			<article
+				class="col-lg-4 col-md-6 col-sm-6 col-xs-12 p0 m0 userinfoABForLagyLoad"
+				id="wag-user-info">
+				<wag:userinfo-new-header>
+					<section
+						class="wag-userinfo-container wag-sticky-u wag-sticky-nav-user-info ng-scope"
+						style="background: rgb(238, 238, 238);"
+						ng-class="(UserInfoWithNewExp &amp;&amp; userinfo.recognizedState) ? 'wag-container-signin-notyou':''"
+						ng-controller="userInfoController" ng-init="init()">
+						<!-- ngIf: UserInfoWithNewExp -->
+						<article class="wag-userinfo-wrapper pt3 ng-scope"
+							ng-if="UserInfoWithNewExp">
+							<!-- ngIf: (windowWidth > 767) -->
+							<article class="wag-user-picture hidden-xs ng-scope"
+								ng-if="(windowWidth > 767)">
+								<img ng-src="images/Account_Avatar_DD.wdp" alt="user picture"
+									src="images/Account_Avatar_DD.wdp">
+							</article>
+							<aside
+								class="wag-header-userinfotab wag-header-youraccount-mobile pull-left">
+								<!-- ngIf: userinfo.loggedin === 'true' || userinfo.recognizedState -->
+								<div class="clearfix"></div>
+								<div id="youaccountdropdown" aria-haspopup="true"
+									aria-expanded="false"
+									class="wag-header-youraccount-wrapper dropdown"
+									ng-class="(userinfo.loggedin === 'true' || userinfo.recognizedState)?'wag-header-youraccount-wrapper-login':''">
+									<span id="wag-youraccount-infomob"><a
+										data-toggle="dropdown" href="#0" ng-click="yourAccountClick()"><span
+											class="wag-youraccount-infomob">Demo User</b> &nbsp;<!-- ngIf: userinfo.notificationmsgcount !== 0 --></span>
+											<figure id="wag-arrowinfo"
+												class="p0 m0 wag-youaccount-userinfarrow">
+												<!-- ngIf: userinfo.notificationmsgcount !== 0 -->
+												<!-- ngIf: userinfo.notificationmsgcount === 0 -->
+												<span ng-if="userinfo.notificationmsgcount === 0"
+													class="icon-ArrowDown wag-youraccountdownicon hidden-xs ng-scope"
+													ng-class="{'wag-youraccountdownicon-login':(userinfo.loggedin === 'true' || userinfo.recognizedState),'wag-youracc-big-txt':(userinfo.nameTruncated.length>=8),'wag-youracc-big-txt-l': (userinfo.nameTruncated.length>=8)}"></span>
+												<!-- end ngIf: userinfo.notificationmsgcount === 0 -->
+												<span
+													class="wag-mobmenu-account-rightarrow icon-ChevronRight"></span>
+												<figcaption></figcaption>
+											</figure></a></span>
+
+									<div class="clearfix"></div>
+								</div>
+								<!-- ngIf: userinfo.loggedin === 'false' && !userinfo.recognizedState -->
+								<span class="wag-header-signin-span pl5 ng-scope"
+									ng-if="userinfo.loggedin === 'false' &amp;&amp; !userinfo.recognizedState"><a
+									class="wag-header-signin-mobile" href="javascript: void(0);"
+									ng-click="signinRedirection()" onclick="fnLoadHome();">Home</a>
+									<span class="wag-header-userinfo-or">&nbsp;</span> <a
+									class="wag-header-signin-mobile" href="javascript: void(0);"
+									ng-click="registerRedirection()" onclick="fnLoadLogin();">Logout</a></span>
+								<!-- end ngIf: userinfo.loggedin === 'false' && !userinfo.recognizedState -->
+							</aside>
+
+						</article>
+						<!-- end ngIf: UserInfoWithNewExp -->
+					</section>
+				</wag:userinfo-new-header>
+			</article>
+
+		</div>
+	</section>
+
+
+	<div class="container form-horizontal"
+		style="background-color: #ffffff; border: 0px; margin-top: 20px;">
+		<!-- Text input-->
+		<div class="form-group">
+			<div
+				class="col-xs-12 col-sm-12 col-md-12 col-lg-12 inputGroupContainer">
+				<div class="input-group">
+					<span class="input-group-addon" style="background-color: #ffffff;"><i
+						class="glyphicon glyphicon-menu-left"></i></span> <input
+						class="form-control" type="text" onclick="fnOnClick();"
+						onblur="fnOnBlur();"
+						style="text-align: center; border-right: 0px; border-left: 0px;"
+						placeholder="Scan the Article" /><span class="input-group-addon"
+						style="background-color: #ffffff;"><i
+						class="glyphicon glyphicon-search"></i></span>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div
+				class="col-xs-12 col-sm-12 col-md-12 col-lg-12 inputGroupContainer">
+				<div class="input-group">
+					<label class="control-label"
+						style="vertical-align: -webkit-baseline-middle;">Filter</label><span
+						class="input-group-addon"
+						style="background-color: #fff; border: 0px #fff;"><i
+						class="glyphicon glyphicon-filter"></i></span><span
+						class="input-group-addon"
+						style="background-color: #fff; border: 0px #fff;"><i
+						class="glyphicon glyphicon-sort"></i></span>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div
+				class="col-xs-12 col-sm-12 col-md-12 col-lg-12 inputGroupContainer">
+				<div class="input-group">
+					<span class="input-group-addon"><input type="checkbox"
+						name="chkbox" id="bay1chkbox" /></span> <label class="form-control"
+						style="text-align: left; background-color: #eeeeee; border-right: 0px; border-left: 0px; vertical-align: middle; float: none; font-weight: bold;">Bay
+						1</label><span class="input-group-addon"><i id="bay1"
+						class="glyphicon glyphicon-menu-up"></i></span>
+				</div>
+
+				<div class="input-group" id="bay11">
+					<span class="input-group-addon"
+						style="background-color: #ffffff; border: 0px #fff;"><input
+						type="checkbox" name="chkbox" /></span> <label class="form-control"
+						style="text-align: left; border: 0px #fff; vertical-align: middle; float: none;">A40
+						- A99<br />28/06/2016
+					</label> <span class="input-group-addon"
+						style="background-color: #ffffff; border: 0px #fff;"><label>0/10</label></span>
+					<span class="input-group-addon"
+						style="background-color: #ffffff; border: 0px #fff;"><i
+						class="glyphicon glyphicon-menu-right"></i></span>
+				</div>
+
+				<div class="input-group" id="bay12">
+					<span class="input-group-addon"
+						style="background-color: #ffffff; border: 0px #fff;"><input
+						type="checkbox" name="chkbox" /></span> <label class="form-control"
+						style="text-align: left; border: 0px #fff; vertical-align: middle; float: none;">B40
+						- B99<br />29/06/2016
+					</label> <span class="input-group-addon"
+						style="background-color: #ffffff; border: 0px #fff;"><label>0/13</label></span>
+					<span class="input-group-addon"
+						style="background-color: #ffffff; border: 0px #fff;"><i
+						class="glyphicon glyphicon-menu-right"></i></span>
+				</div>
+
+				<div class="input-group">
+					<span class="input-group-addon"><input type="checkbox"
+						name="chkbox" id="bay2chkbox" /></span> <label class="form-control"
+						style="text-align: left; background-color: #eeeeee; border-right: 0px; border-left: 0px; vertical-align: middle; float: none; font-weight: bold;">Bay
+						2</label><span class="input-group-addon"><i id="bay2"
+						class="glyphicon glyphicon-menu-up"></i></span>
+				</div>
+
+				<div class="input-group" id="bay21">
+					<span class="input-group-addon"
+						style="background-color: #ffffff; border: 0px #fff;"><input
+						type="checkbox" name="chkbox" /></span> <label class="form-control"
+						style="text-align: left; border: 0px #fff; vertical-align: middle; float: none;">Z10
+						- Z29<br />30/06/2016
+					</label> <span class="input-group-addon"
+						style="background-color: #ffffff; border: 0px #fff;"><label>0/20</label></span>
+					<span class="input-group-addon"
+						style="background-color: #ffffff; border: 0px #fff;"><i
+						class="glyphicon glyphicon-menu-right"></i></span>
+				</div>
+
+				<div class="input-group" id="bay22">
+					<span class="input-group-addon"
+						style="background-color: #ffffff; border: 0px #fff;"><input
+						type="checkbox" name="chkbox" /></span> <label class="form-control"
+						style="text-align: left; border: 0px #fff; vertical-align: middle; float: none;">Y10
+						- Y20<br />02/07/2016
+					</label> <span class="input-group-addon"
+						style="background-color: #ffffff; border: 0px #fff;"><label>0/15</label></span>
+					<span class="input-group-addon"
+						style="background-color: #ffffff; border: 0px #fff;"><i
+						class="glyphicon glyphicon-menu-right"></i></span>
+				</div>
+
+
+				<div class="input-group">
+					<span class="input-group-addon"><input type="checkbox"
+						name="chkbox" id="bay3chkbox" /></span> <label class="form-control"
+						style="text-align: left; background-color: #eeeeee; border-right: 0px; border-left: 0px; vertical-align: middle; float: none; font-weight: bold;">Bay
+						3</label><span class="input-group-addon"><i id="bay3"
+						class="glyphicon glyphicon-menu-up"></i></span>
+				</div>
+
+				<div class="input-group" id="bay31">
+					<span class="input-group-addon"
+						style="background-color: #ffffff; border: 0px #fff;"><input
+						type="checkbox" name="chkbox" /></span> <label class="form-control"
+						style="text-align: left; border: 0px #fff; vertical-align: middle; float: none;">Z10
+						- Z29<br />30/06/2016
+					</label> <span class="input-group-addon"
+						style="background-color: #ffffff; border: 0px #fff;"><label>0/20</label></span>
+					<span class="input-group-addon"
+						style="background-color: #ffffff; border: 0px #fff;"><i
+						class="glyphicon glyphicon-menu-right"></i></span>
+				</div>
+
+				<div class="input-group" id="bay32">
+					<span class="input-group-addon"
+						style="background-color: #ffffff; border: 0px #fff;"><input
+						type="checkbox" name="chkbox" /></span> <label class="form-control"
+						style="text-align: left; border: 0px #fff; vertical-align: middle; float: none;">Y10
+						- Y20<br />02/07/2016
+					</label> <span class="input-group-addon"
+						style="background-color: #ffffff; border: 0px #fff;"><label>0/15</label></span>
+					<span class="input-group-addon"
+						style="background-color: #ffffff; border: 0px #fff;"><i
+						class="glyphicon glyphicon-menu-right"></i></span>
+				</div>
+
+				<div class="input-group">
+					<span class="input-group-addon"><input type="checkbox"
+						name="chkbox" id="bay4chkbox" /></span> <label class="form-control"
+						style="text-align: left; background-color: #eeeeee; border-right: 0px; border-left: 0px; vertical-align: middle; float: none; font-weight: bold;">Bay
+						4</label><span class="input-group-addon"><i id="bay4"
+						class="glyphicon glyphicon-menu-up"></i></span>
+				</div>
+
+				<div class="input-group" id="bay41">
+					<span class="input-group-addon"
+						style="background-color: #ffffff; border: 0px #fff;"><input
+						type="checkbox" name="chkbox" /></span> <label class="form-control"
+						style="text-align: left; border: 0px #fff; vertical-align: middle; float: none;">Z10
+						- Z29<br />30/06/2016
+					</label> <span class="input-group-addon"
+						style="background-color: #ffffff; border: 0px #fff;"><label>0/20</label></span>
+					<span class="input-group-addon"
+						style="background-color: #ffffff; border: 0px #fff;"><i
+						class="glyphicon glyphicon-menu-right"></i></span>
+				</div>
+
+				<div class="input-group" id="bay42">
+					<span class="input-group-addon"
+						style="background-color: #ffffff; border: 0px #fff;"><input
+						type="checkbox" name="chkbox" /></span> <label class="form-control"
+						style="text-align: left; border: 0px #fff; vertical-align: middle; float: none;">Y10
+						- Y20<br />02/07/2016
+					</label> <span class="input-group-addon"
+						style="background-color: #ffffff; border: 0px #fff;"><label>0/15</label></span>
+					<span class="input-group-addon"
+						style="background-color: #ffffff; border: 0px #fff;"><i
+						class="glyphicon glyphicon-menu-right"></i></span>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="form-group" style="text-align: center; padding: 20px;">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<button type="button" class="btn btn-default"
+					onclick="fnLoadArticleDetail();">Next</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
